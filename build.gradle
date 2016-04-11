@@ -19,6 +19,10 @@ jar {
 
 repositories {
     mavenCentral()
+
+    maven {
+        url "https://oss.sonatype.org/content/groups/public/"
+    }
 }
 
 sourceCompatibility = 1.7
