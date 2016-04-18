@@ -36,6 +36,9 @@ dependencies {
     // tag::tests[]
     testCompile("org.springframework.boot:spring-boot-starter-test")
     // end::tests[]
+
+
+    compile("org.apache.opennlp:opennlp-tools:1.6.0")
 }
 
 task wrapper(type: Wrapper) {

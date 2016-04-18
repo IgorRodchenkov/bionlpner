@@ -31,10 +31,29 @@ public class FactoidNlpControllerTest {
     }
 
     @Test
-    public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+    public void getSentences() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/sentences?query=Humpty Dumpty sat on a wall. " +
+                "Humpty Dumpty had a great fall. All the king's horses and all the King's men " +
+                "couldn't put Humpty Dumpty together again.")
+                .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Greetings from Spring Boot (factoid-nlp)!")));
+//                .andExpect(content().string("[\"a\",\"b\",\"c\"]"));
+                .andExpect(content().string(
+                    "[\"Humpty Dumpty sat on a wall.\",\"Humpty Dumpty had a great fall.\"," +
+                    "\"All the king's horses and all the King's men couldn't put Humpty Dumpty together again.\"]"));
     }
 
+    @Test
+    public void getAbner() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/abner?query=hello").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("hello")));
+    }
+
+    @Test
+    public void getRoot() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Hello!")));
+    }
 }
