@@ -5,6 +5,5 @@
 target
 *.iml
 .idea
-gradle
 .gradle
 
