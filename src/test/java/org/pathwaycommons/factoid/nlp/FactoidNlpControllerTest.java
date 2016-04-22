@@ -27,7 +27,7 @@ public class FactoidNlpControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new FactoidNlpController()).build();
+        mvc = MockMvcBuilders.standaloneSetup(new AbnerController(),new SentencesController()).build();
     }
 
     @Test
@@ -37,7 +37,6 @@ public class FactoidNlpControllerTest {
                 "couldn't put Humpty Dumpty together again.")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-//                .andExpect(content().string("[\"a\",\"b\",\"c\"]"));
                 .andExpect(content().string(
                     "[\"Humpty Dumpty sat on a wall.\",\"Humpty Dumpty had a great fall.\"," +
                     "\"All the king's horses and all the King's men couldn't put Humpty Dumpty together again.\"]"));
