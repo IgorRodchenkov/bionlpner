@@ -16,9 +16,4 @@ public class AbnerController {
         return query; //TODO
     }
 
-    @RequestMapping("/")
-    public String index() {
-        return "Hello!";
-    }
-
 }

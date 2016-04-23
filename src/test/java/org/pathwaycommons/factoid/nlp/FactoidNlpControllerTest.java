@@ -27,7 +27,10 @@ public class FactoidNlpControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new AbnerController(),new SentencesController()).build();
+        mvc = MockMvcBuilders.standaloneSetup(
+                new AbnerController(),
+                new SentencesController(),
+                new Controller()).build();
     }
 
     @Test
