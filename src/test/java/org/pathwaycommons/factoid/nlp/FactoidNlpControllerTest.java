@@ -45,12 +45,12 @@ public class FactoidNlpControllerTest {
                     "\"All the king's horses and all the King's men couldn't put Humpty Dumpty together again.\"]"));
     }
 
-    @Test
-    public void getAbner() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/abner?query=hello").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("hello")));
-    }
+//    @Test
+//    public void getAbner() throws Exception {
+//        mvc.perform(MockMvcRequestBuilders.get("/abner?query=hello").accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string(equalTo("hello")));
+//    }
 
     @Test
     public void getRoot() throws Exception {
