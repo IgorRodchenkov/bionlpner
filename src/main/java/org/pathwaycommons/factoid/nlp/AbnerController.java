@@ -34,10 +34,10 @@ public class AbnerController {
 
         final Vector<String[][]> segments = tagger.getSegments(query);
         for(String[][] seg : segments) {
-            Assert.isTrue(seg.length==2);
+            Assert.isTrue(seg.length==2,"seq.length!=2");
             String[] tokens = seg[0];
             String[] tags = seg[1];
-            Assert.isTrue(tokens.length == tags.length);
+            Assert.isTrue(tokens.length == tags.length,"tokens.length != tags.length");
             for(int i=0; i < tokens.length; i++) {
                 String tag = tags[i];
                 if(tag != null && tag.length() > 1) //skip "other" segments (no genomic)?
