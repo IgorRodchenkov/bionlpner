@@ -1,4 +1,4 @@
-# factoid-nlp
+# Experimental factoid-nlp
 
 To develop simple stateless NLP web services for the Factoid project.
 

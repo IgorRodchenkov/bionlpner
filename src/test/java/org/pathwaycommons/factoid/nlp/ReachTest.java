@@ -1,18 +1,36 @@
 package org.pathwaycommons.factoid.nlp;
 
-
 import org.clulab.reach.export.apis.ApiRuler;
 import org.junit.Ignore;
 import org.junit.Test;
 import java.util.Map;
 
-@Ignore //TODO: start/init Reach?
-public class ReachTest {
+/*
+ * Remarks.
+ *
+ * The reach system can be used via its web service, e.g., at reach.baderlab.org:
+ *
+ * curl -XPOST -F 'file=@myfile.txt' http://reach.baderlab.org/api/uploadFile
+ *
+ * (myfile.txt is a file that contains e.g. the example text string below, or an abstract, paper in plain text...)
+ *
+ * or, build and run from reach sources a local ws, using
+ * sbt 'run-main org.clulab.reach.export.server.ApiServer' or using the fat jar
+ * (e.g., see https://github.com/PathwayCommons/reach-docker/blob/master/Dockerfile)
+ * and then, again, -
+ *
+ * curl -XPOST -F 'file=@myfile.txt' http://localhost:8080/api/uploadFile
+ * curl -XPOST -d 'text=Inhibition+of+AICAR+suppresses+the+phosphorylation+of+TBC1D1.' http://localhost:8080/api/textBody
+ *
+ * etc. fun staff.
+ */
 
+@Ignore
+public class ReachTest {
     /**
-     * Example call into the Reach system, providing textual input and
-     * receiving a JSON string in a result Map.
-     * (start the server separately, from reach repo as: sbt 'run-main org.clulab.processors.server.ProcessorServer')
+     * Example call into the Reach system, providing textual input and receiving a JSON string in a result Map.
+     * (have to start Reach's ProcessorServer from the repo, using sbt, or from the assembly fat jar
+     * (not org.clulab.reach.export.server.ApiServer).
      */
     @Test
     public void testText() {
