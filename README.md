@@ -1,7 +1,7 @@
 # Bio text mining web services
 
 **Discontinued: this was an experimental project (using Spring Boot, OpenNLP, Gradle).
-We then moved forward with [Reach](PathwayCommons/reach-docker) and [Saber](BaderLab/Saber).**
+We then moved forward with [Reach](https://github.com/PathwayCommons/reach-docker) and [Saber](https://github.com/BaderLab/Saber).**
 
 A stateless open-source textmining (NER) web service 
 (to be optionally called, e.g., by Pathway Commons Factoid).
