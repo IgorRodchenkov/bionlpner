@@ -1,5 +1,8 @@
 # Bio text mining web services
 
+**Discontinued: this was an experimental project (using Spring Boot, OpenNLP, Gradle).
+We then moved forward with [Reach](PathwayCommons/reach-docker) and [Saber](BaderLab/Saber).**
+
 A stateless open-source textmining (NER) web service 
 (to be optionally called, e.g., by Pathway Commons Factoid).
 
@@ -7,4 +10,4 @@ Currently, this experimental RESTful web services are built with Java, Gradle an
 
 Clone, then build & run:
 
-./gradlew build && java -Dserver.port=8080 -jar build/libs/factoid-nlp-0.1.0.jar
+./gradlew build && java -Dserver.port=8080 -jar build/libs/bionlpner.jar

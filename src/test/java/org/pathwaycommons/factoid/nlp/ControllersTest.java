@@ -20,7 +20,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class FactoidNlpControllerTest {
+public class ControllersTest {
 
     @Autowired
     private MockMvc mvc;
